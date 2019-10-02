@@ -1,4 +1,6 @@
 .navbar
+    padding-top: 4px
+    padding-bottom: 4px
     &-block
         display: flex
         justify-content: space-between
@@ -12,24 +14,28 @@
         flex-direction: column
         color: $text-color
         font-size: 13px
-        font-weight: 400
+        @include reg
     &__button
         margin-left: 30px
+        @include bold
     &__phone
         display: inline-block
         color: $text-color
         font-size: 20px
-        font-weight: 700
+        @include bold
         text-decoration: none
-        margin-top: 10px
+        margin-top: 6px
         
 
 @media (max-width: 768px)
     .navbar
+        padding: 17px 15px
         &__contacts
             display: none
         &__button
-            font-size: 12px
-            padding: 15px 26px
+            font-size: 10px
+            padding: 15px 26px 19px
+            @include bold
+            border-radius: 5px
         &__logo
             width: 90px
